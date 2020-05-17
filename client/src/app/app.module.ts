@@ -9,7 +9,8 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { LoadingInterceptor } from './core/services/loading.interceptors';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptors';
+import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,12 @@ import { LoadingInterceptor } from './core/services/loading.interceptors';
     HttpClientModule,
     CoreModule,
     HomeModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
   providers: [
-    // tslint:disable-next-line: max-line-length
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}, // multi especifica que es el unico intercepotor que tenemos en nuestra app
-    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
