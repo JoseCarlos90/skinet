@@ -6,7 +6,7 @@ using Core.Entities.OrderAggregate;
 using Core.Interfaces;
 using Core.Specifications;
 
-namespace Infrastructure.Service
+namespace Infrastructure.Services
 {
     public class OrderService : IOrderService
     {

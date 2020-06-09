@@ -10,7 +10,7 @@ using Stripe;
 using Order = Core.Entities.OrderAggregate.Order;
 using Product = Core.Entities.Product;
 
-namespace Infrastructure.Service
+namespace Infrastructure.Services
 {
     public class PaymentService : IPaymentService
     {
