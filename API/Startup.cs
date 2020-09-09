@@ -24,7 +24,7 @@ namespace API
         }
 
         public void ConfigureDevelopmentServices(IServiceCollection services)
-        {
+        { 
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<AppIdentityDbContext>(x =>
             {
@@ -37,7 +37,7 @@ namespace API
             // services.AddDbContext<AppIdentityDbContext>(x =>
             // {
             //     x.UseMySql(_configuration.GetConnectionString("IdentityConnection"));
-            // });
+            // });    
 
             // ConfigureServices(services);
         }
