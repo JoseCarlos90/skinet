@@ -40,7 +40,7 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
     private router: Router) { }
 
   ngAfterViewInit(): void {
-    this.stripe = Stripe('pk_test_AsSTh1MspAK4zvQauWiQWSNd00A4xBr6Fn');
+    this.stripe = Stripe('pk_test_51GlunMKKHRLf1DbySI80HXCQPBzCd9PPALqYExUkEVrEoJZXmRFiuQ2aifVi6T1CBvK23x8cyar5ZvwAIDVmdHZ300kka9GBNN');
     const elements = this.stripe.elements();
 
     // Esto se hace para montar los inputs que vinen de stripe(libreria) sobre los inputs nativos que estamos creando para introducir datos
