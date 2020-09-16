@@ -12,6 +12,7 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { BasketSummaryComponent } from './components/basket-summary/basket-summary.component';
 import { RouterModule } from '@angular/router';
+import {CurrencyMaskModule} from 'ng2-currency-mask';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     FormsModule, // Template Form (no usamos este metodo solo se pone aqui para la paginacion mediante cache)
     CdkStepperModule,
-    RouterModule
+    RouterModule,
+    CurrencyMaskModule,
   ],
   exports: [
     PaginationModule,
@@ -38,7 +40,8 @@ import { RouterModule } from '@angular/router';
     TextInputComponent,
     StepperComponent,
     CdkStepperModule,
-    BasketSummaryComponent
+    BasketSummaryComponent,
+    CurrencyMaskModule
   ]
 })
 export class SharedModule { }
